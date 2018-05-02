@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="publisher" content="TideCMS 9.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>$item.getTitle()_金坛手机台</title>
+    <link rel="stylesheet" type="text/css" href="http://static2.jstv.com/ui/jintan/style2.css"/>
+    <style>
+        .live {width: 33%;float: left;text-align: center;border: 1px solid #e5e5e5;height: 0.68rem; font-size: 0.3rem;box-sizing: 0;background: #fff;line-height: 0.68rem; border-left: 0;}
+        .interaction {width: 34%;float: left;text-align: center;border: 1px solid #e5e5e5;height: 0.68rem; font-size: 0.3rem;box-sizing: 0;background: #fff;line-height: 0.68rem; border-left: 0;}
+        .addLiveInfo {width: 33%;float: left;text-align: center;border: 1px solid #e5e5e5;height: 0.68rem; font-size: 0.3rem;box-sizing: 0;background: #fff;line-height: 0.68rem; border-right: 0;border-left: 0;}
+        .btnLoadMoreMsg {width: 30%;margin-left: 35%;margin-top: 0.3rem; display: block;}
+        .btnNewMsg {position: fixed; width: 30%; bottom: 0.8rem; right: 5px; z-index: 1001;}
+    </style>
+</head>
+<div></div>
+<body data_share="$item.getValue('Photo')" data_share1="$item.getValue('Summary')" data-img="$item.getValue('Photo')"
+      data-desc="$item.getValue('Summary')">
+ <div class="flex main" id="LiveInfo">     
+        <div class="up">
+
+            <!-- 视频播放器 -->
+            <div class="video">
+                <video class="player" poster="{{liveInfo.ThumbUrl}}" src="{{liveInfo.Href4live}}" controls="controls" playsinline="" x-webkit-airplay="" webkit-playsinline="" preload="auto" style="display: none;"></video>
+                <div style="position:relative; background:#F1F1F1;"> <img class="noShowImg" src="{{liveInfo.ThumbUrl}}" style="width:100%; height:auto; display:block;"> <img class="noShowImg" style="position:absolute; width:50px!important; height:50px; left:15px; bottom:15px; background:rgba(0,0,0,0)" src="http://static.jstv.com/ui/litchinews/v5/btnVideoPlay.png">
+                    <div class="videoImg" style="position:absolute; left:0; top:0; width:100%; height:100%"> </div>
+                </div>
+            </div>
+            <div class="lineShow hide"></div>
+            <!-- 时间 信息 -->
+            <div class="flex visitNum">
+                <div class="visitNumLeft">回放 4月27日上午10:00</div>
+                <div class="visitNumRight flex1">36225人</div>
+            </div>
+
+            <!-- 分类 -->
+            <div class="flex menu">
+                <div class="menuTW hide menuRed" style="display: block;">
+                    <span>图文直播</span>
+                </div>
+                <div class="menuHD hide" style="display: block;">
+                    <span>互动聊天</span>
+                </div>
+                <div class="menuJJ">
+                    <span>直播简介</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分类所属框 -->
+        <div class="down flex1">
+            <div class="divTW hide" style="display: block;">
+                <article id="wrapper">
+                    <header class="maintitle">
+                        <h1 class="title">荔枝现场：2018全球特技飞行群英会</h1>
+                        <section class="origin">
+                            <span>荔枝网</span>
+                            <span>2018/04/27 09:12</span>
+                        </section>
+                    </header>
+                    <section class="content">
+                        <p></p>
+                        <p>　　美国、英国、意大利，全球9支顶尖特技飞行表演队，百位飞行大咖，飞越关山万里，集结中国，炫舞蓝天！特技飞行、空中行走、亚洲首次晚霞飞行秀，一次极具美感的空中盛典上演！27号—29号，荔直播和荔枝新闻&amp;我苏客户端重装出击，连续三天直播，只为给你看最精彩的瞬间！庆祝荔直播上线一周年，三天直播，互动好礼，送不停，每天一台家用投影仪大奖等着你！</p>
+                        <p></p>
+                    </section>
+                </article>
+                <section class="living">
+                    <div class="living_header">
+                        <span>直播</span>
+                        <img src="http://static.jstv.com/ui/litchinews/images/living_line.png" class="imgToBlock">
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>12:03</span>
+                            <p>今天的直播到此结束啦！明天也就是4月28日上午10:00-12:00，将继续为大家直播郑州航展特技飞行表演的盛况。明天同一时间再见哦~</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:59</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524801554982_0.jpg">
+                            <p>【介绍一波】意大利开拓者特技飞行表演队由 Franc Borin, Corrado Rusalen, Claudio Fogli, Marco Gioria 四位优秀飞行员、飞行教官在 2005 年创建。飞行队使用 4架 Pioneer 330 飞机进行飞行表演, 他们配合默契，特技飞行动作编排连贯有序，犹如在空中舞蹈。该队以空中燃放焰火和完美编队驰名欧洲，之后走向世界，在日本，阿联酋，韩国，利比亚，马耳他，意大利，希腊，西班牙，葡萄牙，法国，德国， 奥地利，瑞士，比利时等多国进行过特技飞行表演。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:56</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524801350458_0.jpg">
+                            <p>今天上午最后一支表演队，意大利开拓者特技飞行表演队起飞升空开始表演。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:53</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524801181561_0.jpg">
+                            <p>立陶宛特技飞行表演队已落地。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:51</span>
+                            <p>【终极大奖】恭喜：@ 钟敏 ，你获得的是江苏广电融媒体新闻中心提供的微型智能投影仪一台，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:49</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800971713_0.jpg">
+                            <p>飞机正在平行绕圈。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:45</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800780774_0.jpg">
+                            <p>【介绍一波】立陶宛安博特技飞行表演队由前苏联和立陶宛国家特技飞行队成员组成，立陶宛前总统、世界传奇飞行员罗兰达斯•帕克赛斯为其队长，队员都是世界特飞界的明星人物,他们配合默契，展现出一个个精美奇绝的表演动作和编队造型，是欧洲享有盛誉的古典战机飞行表演队。队伍使用机型为特技飞机YAK系列。Yak50飞机发动机发出的阵阵轰鸣声，以及队员们迅捷灵活的特技飞行表演令人过目不忘。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:45</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800716402_0.jpg">
+                            <p>立陶宛安博特技飞行表演队正在进行表演。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:39</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800363983_0.jpg">
+                            <p>【介绍一波】英国空中焰火特技飞行表演队是世界航展上的超级明星，优雅的滑翔特技动作与绚丽的空中焰火完美结合，带给观众精彩的视觉盛宴。去年该表演队作为英女王诞辰 90 周年盛典的表演嘉宾出现，给到场的世界各国名流留下了深刻印象。队长盖伊是英国航空 B787 机长和滑翔机教员，拥有数十年的特技飞行表演经验。僚机机长 Rob是欧洲知名的精英飞行员，掌握着高超的空中焰火表演技术。队伍使用机型为特技飞机 Grob 型号。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:38</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800330519_0.jpg">
+                            <p>【介绍一波】英国空中烟火特技飞行表演队革命性地改变了航展世界，他们将优雅的滑翔特技动作与绚丽的空中焰火完美结合在了一起！该飞行队是空中烟火市场的开拓者和领导者，并以其不断进取，不断创新的精神而保持领先地位！ 他们以灯光为画笔，在夜空中为观众留下了一幅幅不可思议的图画。其业务范围不仅涵盖婚礼庆典，甚至在全国最大的庆祝活动也能看到他们的英姿。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:38</span>
+                            <p>英国空中烟火特技飞行表演队也结束了他们的表演。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:36</span>
+                            <p>【第四轮抽奖】恭喜以下五位观众：@ 淡定 @ 再见吧，喵小姐！ @ 追随 @ 只为悠悠 @ 秋风落叶 ，你们获得的是江苏广电融媒体新闻中心提供的精美礼品一份，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你们！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:31</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524799914729_0.jpg">
+                            <p>天空之舞降落啦。飞机的装饰也非常美丽！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:30</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524800168135_0.jpg">
+                            <p>天空之舞特技飞行表演队在天空画出两个爱心，赶快存图送给你心爱的人吧！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:29</span>
+                            <p>【介绍一波】天空之舞特技飞行表演队是一支能够进行壮观的编队特技飞行或单机特技飞行表演的专业特技飞行队。近几年来，该飞行队在世界各地进行了多次飞行表演。天空之舞阵容强大，是国际编队飞行表演中最抢手的团队之一。该队由技艺精湛的世界级特技飞行员组成。他们来自欧洲各国，在飞行界犹如队伍的称号一般闪亮，在世界顶级飞行赛场上频频展现他们的英姿，编队造型以及衔接一直是他们不断创新的部分，可做单机、双机、四机空中燃放焰火表演。 2011年，该队由领队Mark Jefferies组建，团队的每位成员都在高级和无限制级特技飞行竞赛中，包括英国特技飞行锦标赛中取得了卓越的成绩。欧洲天空之舞特技飞行表演队是一支4机编队飞行队，团队成员驾驶Extra系列和CAP飞机。每架飞机都以其精湛的特技能力和拉烟系统为观众呈现出了绚烂独特的风采。 此外，天空之舞特技飞行表演队还在2018央视春晚珠海分会场进行了“飞越港珠澳大桥”的特技飞行表演，为全国观众带来了一场视觉盛宴！
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:23</span>
+                            <p>【第三轮抽奖】恭喜以下五位观众：@ 蓝色海洋 @ 单干东 @ moon @ 浩南 @ 依依 ，你们获得的是江苏广电融媒体新闻中心提供的定制USB插头一份，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你们！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:23</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524799384527_0.jpg">
+                            <p>飞机在蔚蓝的天空上划出优美的弧线！！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:21</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524799270090_0.jpg">
+                            <p>现在为我们表演的是欧洲天空之舞特技飞行表演队4机编队。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:13</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524798657024_0.jpg">
+                            <p>现在为我们表演的英国御风机翼行走特技飞行表演队。飞行员们驾驶飞机表演一系列令人目眩的特技飞行和编队分列，而机翼上将会有特技演员表演包括一系列惊险的舞蹈动作和倒立。在此过程中，队员的飞机的最高时速达到150英里，队员承受的重力最高达到4个重力单位。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:08</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524798533892_0.jpg">
+                            <p>主持人抓住一个刚刚表演完下飞机的立陶宛飞行员，英文对话666</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:05</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524798326797_0.jpg">
+                            <p>飞机完成通场表演后回到机场停机坪。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:04</span>
+                            <p>【第二轮抽奖】恭喜以下五位观众：@ Easy @ 五月海岚 @ 单洁 @ Paul斗斗 @ 本宝宝喜欢吃橘子糖 ，你们获得的是江苏广电融媒体新闻中心提供的精美礼品一份，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你们！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>11:01</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524798075630_0.jpg">
+                            <p>英国雅皮士特技飞行表演队6机编队拉烟通场。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:54</span>
+                            <p>一会儿首先给我们带来表演的是英国御风机翼行走特技飞行表演队，两位漂亮的英国小姐姐将炫酷登场！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:47</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524797272162_0.jpg">
+                            <p>跳伞表演真的是很精彩，小编有看到五星红旗迎风飘扬，为祖国打call！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:43</span>
+                            <p>【第一轮抽奖】恭喜以下五位观众：@ 中药 @ 記憶中的过客 @ 小魁 @ jason威 @ 刘震 ，你们获得的是江苏广电融媒体新闻中心提供的精美礼品一份，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你们！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:38</span>
+                            <p>飞机起飞后需要爬升到一千米的高度，再进行特技比表演！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:37</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524796744686_0.jpg">
+                            <p>正在滑跑起飞的是意大利开拓者特技飞行表演队~一般的特技飞机都是前后座，然而我们看到的这组意大利飞机采用的是并座。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:33</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524796371887_0.jpg">
+                            <p>主持人身后，全场的特技表演飞机正滑行列队，准备起飞…</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:27</span>
+                            <p>吵着要要看歼-10战斗机的童鞋们注意了！【科普一波】2018年郑州航展4月27日—5月1日在郑州上街机场举行。将有9支世界特技飞行表演队伍进行飞行表演，同时，在每天傍晚时分上演亚洲范围内首次晚霞飞行秀。</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:23</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524795754542_0.jpg">
+                            <p>在各架飞机进行solo表演前，全场的24架特技飞行表演机将全体大列队来个通场表演哦~目测场面将相当震撼，敬请期待！</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:14</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524795277718_0.jpg">
+                            <p>各大飞机飞行前引擎测试中……</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:13</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524795176118_0.jpg">
+                            <p>巧遇动力伞飞行员，飞行前来露个脸~</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:12</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524795125539_0.jpg">
+                            <p>飞行前准备，马上表演就要开始了哦~</p>
+                        </div>
+                    </div>
+                    <div class="item"> <img src="http://static.jstv.com/ui/litchinews/images/litcheeEditor.png" class="editor">
+                        <div class="message"> <img src="http://static.jstv.com/ui/litchinews/images/triangle.png" class="triangle">
+                            <span>10:06</span> <img class="imgToApp" src="http://static.jstv.com/img/2018/4/27/20184271524794808213_0.jpg">
+                            <p>美女主持正在郑州上街机场，全球各地的特技飞机集聚在此，我们的直播一开场就吸引了飞行及地勤人员围观！</p>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+            <div class="divHD hide">
+                <div class="btnHistoryMore">
+                    <span>+ 载入更多评论</span>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>【介绍一波】英国空中烟火特技飞行表演队革命性地改变了航展世界，他们将优雅的滑翔特技动作与绚丽的空中焰火完美结合在了一起！该飞行队是空中烟火市场的开拓者和领导者，并以其不断进取，不断创新的精神而保持领先地位！ 他们以灯光为画笔，在夜空中为观众留下了一幅幅不可思议的图画。其业务范围不仅涵盖婚礼庆典，甚至在全国最大的庆祝活动也能看到他们的英姿。
+                            <img src="http://static.jstv.com/img/2018/4/27/20184271524800330519_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>【介绍一波】英国空中焰火特技飞行表演队是世界航展上的超级明星，优雅的滑翔特技动作与绚丽的空中焰火完美结合，带给观众精彩的视觉盛宴。去年该表演队作为英女王诞辰 90 周年盛典的表演嘉宾出现，给到场的世界各国名流留下了深刻印象。队长盖伊是英国航空 B787 机长和滑翔机教员，拥有数十年的特技飞行表演经验。僚机机长 Rob是欧洲知名的精英飞行员，掌握着高超的空中焰火表演技术。队伍使用机型为特技飞机 Grob 型号。
+                            <img src="http://static.jstv.com/img/2018/4/27/20184271524800363983_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>立陶宛安博特技飞行表演队正在进行表演。<img src="http://static.jstv.com/img/2018/4/27/20184271524800716402_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>【介绍一波】立陶宛安博特技飞行表演队由前苏联和立陶宛国家特技飞行队成员组成，立陶宛前总统、世界传奇飞行员罗兰达斯•帕克赛斯为其队长，队员都是世界特飞界的明星人物,他们配合默契，展现出一个个精美奇绝的表演动作和编队造型，是欧洲享有盛誉的古典战机飞行表演队。队伍使用机型为特技飞机YAK系列。Yak50飞机发动机发出的阵阵轰鸣声，以及队员们迅捷灵活的特技飞行表演令人过目不忘。
+                        </span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>飞行正在平行绕圈。<img src="http://static.jstv.com/img/2018/4/27/20184271524800971713_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>【终极大奖】恭喜：@ 钟敏 ，你获得的是江苏广电融媒体新闻中心提供的微型智能投影仪一台，请私信江苏新闻微信公众号，留下真实姓名，联系电话，身份证号和邮寄地址，恭喜你！</span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>立陶宛特技飞行表演队已落地。<img src="http://static.jstv.com/img/2018/4/27/20184271524801181561_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>今天上午最后一支表演队，意大利开拓者特技飞行表演队起飞升空开始表演。<img src="http://static.jstv.com/img/2018/4/27/20184271524801350458_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>【介绍一波】意大利开拓者特技飞行表演队由 Franc Borin, Corrado Rusalen, Claudio Fogli, Marco Gioria 四位优秀飞行员、飞行教官在 2005 年创建。飞行队使用 4架 Pioneer 330 飞机进行飞行表演, 他们配合默契，特技飞行动作编排连贯有序，犹如在空中舞蹈。该队以空中燃放焰火和完美编队驰名欧洲，之后走向世界，在日本，阿联酋，韩国，利比亚，马耳他，意大利，希腊，西班牙，葡萄牙，法国，德国， 奥地利，瑞士，比利时等多国进行过特技飞行表演。
+                            <img src="http://static.jstv.com/img/2018/4/27/20184271524801554982_0.jpg"></span>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="userImg"><img src="http://userpic-litchi.jstv.com/UserAvatar/lzxb.png"></div>
+                    <div class="flex1">
+                        <span class="userTxt txtCN">
+                            <span class="userName">图文直播: </span>今天的直播到此结束啦！明天也就是4月28日上午10:00-12:00，将继续为大家直播郑州航展特技飞行表演的盛况。明天同一时间再见哦~</span>
+                    </div>
+                </div>
+                <span class="btnNewMsg hide" style="display: none;">查看新消息</span>
+            </div>
+            <div class="divJJ hide">
+                <span>直播简介</span><br>
+                <div class="txtCN">
+                    <p>　　美国、英国、意大利，全球9支顶尖特技飞行表演队，百位飞行大咖，飞越关山万里，集结中国，炫舞蓝天！特技飞行、空中行走、亚洲首次晚霞飞行秀，一次极具美感的空中盛典上演！27号—29号，荔直播和荔枝新闻&amp;我苏客户端重装出击，连续三天直播，只为给你看最精彩的瞬间！庆祝荔直播上线一周年，三天直播，互动好礼，送不停，每天一台家用投影仪大奖等着你！</p>
+                </div>
+            </div>
+            <div class="flex inputMsg hide" style="display: none;">
+                <input class="msgContent flex1">
+                <div class="btnSent">
+                    <span>发送</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script src="http://static.jstv.com/ui/common/file/jquery-2.2.4.min.js"></script>
+<script src="http://static2.jstv.com/ui/jintan/base.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+<script src="http://static.jstv.com/ui/common/file/wx_api.js"></script>
+<script src="http://static2.jstv.com/ui/jintan/socket.io.js"></script>
+<script src="http://static.jstv.com/ui/common/file/analytics.jt.js"></script>
+
+<script>
+    localStorage.linkUrl = String(window.location).split("?")[0];
+    var msgOnOff = 1; //最新互动消息是否展示，1为显示并跳转到最后一条，0为不展示，此时显示有最新消息的提示按钮
+    var FirstID = 0; //历史消息分页请求，为空返回第一页
+    var newMsgShow = 1; //是否显示查看更多按钮。1不显示，默认加载显示最新消息
+    var liveID = 0, liveTime = 0;
+    //var roomId = 3809069;
+    var roomId = $item.getGlobalID();
+    var videoUrlNow = "";
+    var lineNo = 1;
+    if (roomId == 3571758) {
+        $("body").prepend("<a href='http://a.app.qq.com/o/simple.jsp?pkgname=com.jsbc.lznews'><img src='http://static.jstv.com/ui/litchinews/videolive/images/lichiaap.jpg' style='border:0; position:absolute; z-index:21000; left:0; bottom:0; width:100%'/></a>");
+    }
+
+
+    var msgHistory = "http://wapapi-jintan.jstv.com/Comment/" + roomId
+    var infoUrl = "http://wapapi-jintan.jstv.com/VideoLive/TV/" + roomId;
+    var liveUrl = "http://chat-jintan.jstv.com";
+    // var msgHistory = "http://news.jstv.com/api/Chat/" + roomId + "/Paging?FirstID=";
+    // var infoUrl = "http://news.jstv.com/api/videolive/tv/" + roomId;
+    // var liveUrl = "ws://chat.litchi.jstv.com:60081";
+
+    // socket.on('clientreceived', function (msg) {
+    //     var han = document.getElementById('cnt');
+    //     han.innerHTML = han.innerHTML + '<p>'+msg+'</p>';
+    // });
+    // 打开一个 web socket
+    var ws = io(liveUrl);
+    // var socket = io(liveUrl);
+
+    if ("WebSocket" in window) {
+        console.log("您的浏览器支持 WebSocket!");
+        // ws.onopen = function () {
+        //     ws.send(JSON.stringify({  // Web Socket 已连接上，使用 send() 方法发送数据
+        //         "roomid": roomId,
+        //         "type": 1011
+        //     }));
+        //     console.log("数据发送中...");
+        // };
+        ws.on('connect', function () {
+            console.log(JSON.stringify({  // Web Socket 已连接上，使用 send() 方法发送数据
+                "roomid": roomId,
+                "type": 1011,
+                "uwxid": localStorage.wxUid,
+                "userid": 2080372437
+            }))
+            ws.emit('clientsent',
+                JSON.stringify({  // Web Socket 已连接上，使用 send() 方法发送数据
+                    "roomid": roomId,
+                    "type": 1011,
+                    "uwxid": localStorage.wxUid,
+                    "userid": 0
+                })
+            )
+        })
+
+        ws.on('clientreceived', function (evt) {
+            console.log(evt + "(ws)")
+            // console.log(evt.type)
+            // var received_msg = evt.data;
+            var received_obj = JSON.parse(evt);
+            console.log(received_obj.type)
+            switch (received_obj.type) {
+                case 1011:
+                    console.log('1011');
+                    break;
+                case 2021:
+                    console.log(received_obj.message);
+                    jQuery(".attention-num .right").text(received_obj.message + "人关注"); //修改在线人数 message
+                    break;
+                case 60011:
+                    var obj = eval('(' + received_obj.message + ')');
+                    if (obj.length > 0) {
+                        $(".lineShow").empty();
+                        $.each(obj, function (n, v) {
+                            if (v.LiveUrl == videoUrlNow) {
+                                lineNo = 0;
+                                //videoUrlNow = v.LiveUrl;
+                                $(".lineShow").append('<div class="lineNum" data-id="' + v.ID + '" data-time="' + v.StartTime + '" data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore txtRed">' + v.Title + '</div></div>');
+                            } else {
+                                $(".lineShow").append('<div class="lineNum" data-id="' + v.ID + '" data-time="' + v.StartTime + '" data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore">' + v.Title + '</div></div>');
+                            }
+                        });
+                        $(".lineShow").append('<div class="clear"></div>');
+                        console.log(videoUrlNow);
+                        if (lineNo == 1) {
+                            lineNo = 1;
+//									videoUrlNow = obj[0].LiveUrl;
+                            alert("您观看的此路直播已停止，请选择其他线路。");
+                        }
+                    }
+                    if (obj.length > 1) {
+                        $(".lineShow").show();
+                    }
+                    console.log(obj.length);
+                    break;
+                case 1:
+                    console.log(received_obj.message);
+                    if (received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Female.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Female.jpg" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Man.jpg" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Man.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Male.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Male.jpg") {
+                        received_obj.userimage = "http://static.jstv.com/ui/litchinews/videolive/img/Female.png";
+                    }
+
+                    if (received_obj.nickname != localStorage.wxName) {
+                        if (newMsgShow == 1) {
+                            receiveMsg(received_obj)
+                            $("body").animate({scrollTop: $(".msgList").height()}, 1000);
+                        } else {
+                            // jQuery(".msgList").append("<div class='msg-left hide'><img class='userIcon' src='" + received_obj.userimage + "'><div class='userName'>" + received_obj.nickname + "</div><div                       class='arrow'></div><div class='userMsg'>" + received_obj.message + "</div></div>");
+                            receiveMsg(received_obj)
+
+                            $(".btnNewMsg").show();
+                        }
+                    }
+                    break;
+            }
+        });
+        //         ws.onmessage = function (evt) {
+        //             var received_msg = evt.data;
+        //             var received_obj = JSON.parse(received_msg);
+        //             switch (received_obj.type) {
+        //                 case 1011:
+        //                     ws.send(JSON.stringify({
+        //                         "roomid": roomId,
+        //                         "nickname": localStorage.wxName,
+        //                         "message": '',
+        //                         "userimage": localStorage.wxImg,
+        //                         "userid": wxNum,
+        //                         "type": 2021
+        //                     }));
+        //                     //console.log(received_msg + "2021");
+        //                     break;
+        //                 case 2021:
+        //                     console.log(received_obj.message);
+        //                     jQuery(".attention-num .right").text(received_obj.message + "人关注"); //修改在线人数 message
+        //                     break;
+        //                 case 60011:
+        //                     var obj = eval('(' + received_obj.message + ')');
+        //                     if (obj.length > 0) {
+        //                         $(".lineShow").empty();
+        //                         $.each(obj, function (n, v) {
+        //                             if (v.LiveUrl == videoUrlNow) {
+        //                                 lineNo = 0;
+        //                                 //videoUrlNow = v.LiveUrl;
+        //                                 $(".lineShow").append('<div class="lineNum" data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore txtRed">' + v.Title + '</div></div>');
+        //                             } else {
+        //                                 $(".lineShow").append('<div class="lineNum" data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore">' + v.Title + '</div></div>');
+        //                             }
+        //                         });
+        //                         $(".lineShow").append('<div class="clear"></div>');
+        //                         console.log(videoUrlNow);
+        //                         if (lineNo == 1) {
+        //                             lineNo = 1;
+        // //									videoUrlNow = obj[0].LiveUrl;
+        //                             alert("您观看的此路直播已停止，请选择其他线路。");
+        //                         }
+        //                     }
+        //                     if (obj.length > 1) {
+        //                         $(".lineShow").show();
+        //                     }
+        //                     console.log(obj.length);
+        //                     break;
+        //                 case 1:
+        //                     console.log(received_obj.message);
+        //                     if (received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Female.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Female.jpg" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Man.jpg" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Man.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Male.png" || received_obj.userimage == "http://avatar.litchi.jstv.com/Avatar/Male.jpg") {
+        //                         received_obj.userimage = "http://static.jstv.com/ui/litchinews/videolive/img/Female.png";
+        //                     }
+        //
+        //                     if (received_obj.nickname != localStorage.wxName) {
+        //                         if (newMsgShow == 1) {
+        //                             jQuery(".msgList").append("<div class='msg-left'><img class='userIcon' src='" + received_obj.userimage + "'><div class='userName'>" + received_obj.nickname + "</div><div                       class='arrow'></div><div class='userMsg'>" + received_obj.message + "</div></div>");
+        //                             $("body").animate({scrollTop: $(".msgList").height()}, 1000);
+        //                         } else {
+        //                             jQuery(".msgList").append("<div class='msg-left hide'><img class='userIcon' src='" + received_obj.userimage + "'><div class='userName'>" + received_obj.nickname + "</div><div                       class='arrow'></div><div class='userMsg'>" + received_obj.message + "</div></div>");
+        //                             $(".btnNewMsg").show();
+        //                         }
+        //                     }
+        //                     break;
+        //             }
+        //         };
+        ws.on('close', function () {
+            console.log("连接已关闭...");
+        })
+
+        // ws.onclose = function () {
+        //     console.log("连接已关闭...");
+        // };
+    } else {
+        console.log("您的浏览器不支持 WebSocket!");
+    }
+
+    function receiveMsg(n) {
+        var newMsgcontent = "<div class='msg-left'><img class='userIcon' src='" + n.userimage + "'><div class='userName'>" + n.nickname + "</div><div class='arrow'></div><div class='userMsg'>" + n.message + "</div></div>"
+        if (n.photourls && received_obj.photourls.length != 0) {
+            for (var i = 0; i < n.photourls; i++) {
+                newMsgcontent += "<img src='" + n.photourls[i] + "' />"
+            }
+        }
+        newMsgcontent += "</div></div>"
+        jQuery(".msgList").append(newMsgcontent);
+    }
+
+    jQuery(function () {
+        jQuery.getJSON(infoUrl, function (data) {
+            var liveUrl = data.Data.Href4live;
+            var textLive = data.Data.TextliveUrl;
+            var commentAble = data.Data.Commentable;
+            $("body").prepend("<img src='" + data.Data.Photo + "' style='display:block;width:100%;height:100%;position:absolute;top:0;left:0;opacity:0;z-index:-100;'>");
+            //判断5种情况 framediv是图文，picOlny是顶部图片， liveVideo是顶部视频， msgList是互动消息，liveInfo是直播介绍， live和interaction是图文和互动两个按钮
+            if (liveUrl == "" && textLive != "" && commentAble == "1") {
+                jQuery(".framediv, .picOlny").show();
+            }
+            if (liveUrl != "" && textLive == "" && commentAble == "0") {
+                jQuery(".liveVideo, .liveInfo").show();
+            }
+            if (liveUrl != "" && textLive == "" && commentAble == "1") {
+                jQuery(".liveVideo, .msgList, .interaction, .addLiveInfo").show();
+                $(".interaction, .addLiveInfo").css("width", "50%");
+                $(".interaction").addClass("txtRed");
+                if (isWeiXin()) {
+                    $(".inputMsg").show();
+                } else {
+                    $(".inputMsg").hide();
+                }
+                $("body").animate({scrollTop: $(".msgList").height()}, 10);
+            }
+            if (liveUrl != "" && textLive != "" && commentAble == "0") {
+                jQuery(".liveVideo, .framediv").show();
+            }
+            if (liveUrl != "" && textLive != "" && commentAble == "1") {
+                jQuery(".liveVideo, .framediv, .interaction, .live, .addLiveInfo").show();
+            }
+
+            // 默认streamID
+            liveID = data.Data.HDLivePiece.length != 0 ? data.Data.HDLivePiece[0].ID : ""
+            liveTime =   data.Data.HDLivePiece.length != 0 ? data.Data.HDLivePiece[0].StartTime : ""
+            console.log(liveTime)
+            jQuery(".picOlny img").attr("src", data.Data.Photo);
+            jQuery(".liveInfo-content").text(data.Data.Summary);
+            // console.log(data.Data.TextliveUrl)
+            var FrameArr = data.Data.TextliveUrl.split('/');
+
+            FrameArr.map(function (i, n) {
+                if (i == "live") {
+                    FrameArr.splice(n + 1, 0, "part")
+                }
+            })
+            console.log(FrameArr)
+            var TextliveUrl = ""
+            for (j = 0; j < FrameArr.length; j++) {
+                if (j == FrameArr.length - 1) {
+                    TextliveUrl += FrameArr[j]
+                } else {
+                    TextliveUrl += FrameArr[j] + "/"
+                }
+            }
+            jQuery("#frame").attr("src", TextliveUrl);
+            // alert("!")
+            //jQuery("title").text(data.Data.Title);
+            jQuery(".attention-num .right").text(data.Data.VisitCountDisplay + "人关注"); //修改在线人数 message
+
+            jQuery("video").attr("poster", data.Data.Photo);
+            videoUrlNow = data.Data.Href4live;
+            jQuery("video").attr("src", videoUrlNow); // http://live2016hls-yf.jstv.com/live/jscs_480p/online.m3u8 这个可以播放
+            if (data.Data.RoomStatus == "预告") {
+                jQuery(".attention-num .left").text("直播时间 " + data.Data.LiveStartTime + " 开始");
+            }
+            console.log(data.Data.HDLivePiece.length);
+
+            if (data.Data.HDLivePiece.length > 1) {
+                $(".lineShow").show();
+            }
+            if (data.Data.HDLivePiece.length > 0) {
+                $.each(data.Data.HDLivePiece, function (n, v) {
+                    if (n == 0) {
+                        videoUrlNow = v.LiveUrl;
+                        jQuery("video").attr("src", videoUrlNow); // http://live2016hls-yf.jstv.com/live/jscs_480p/online.m3u8 这个可以播放
+                        $(".lineShow").append('<div class="lineNum" data-id="' + v.ID + '" data-time="' + v.StartTime + '" data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore txtRed">' + v.Title + '</div></div>');
+                    } else {
+                        $(".lineShow").append('<div class="lineNum" data-id="' + v.ID + '" data-time="' + v.StartTime + '"  data-vUrl="' + v.LiveUrl + '"><img src="' + v.ThumbUrl + '"/><div class="lineTitle txtMore">' + v.Title + '</div></div>');
+                    }
+                });
+                $(".lineShow").append('<div class="clear"></div>');
+            }
+            console.log(videoUrlNow);
+            getHistory();
+
+
+            // 发送消息
+
+            $(".btnSent").click(function () {
+
+                //alert(wxNum);
+                var inputContent = $(".msgContent").val(); //用户输入内容
+                if (inputContent == "") {
+                    return false
+                }
+                var sendMsg = {
+                    "message": inputContent,
+                    "userimage": localStorage.wxImg,
+                    "nickname": localStorage.wxName,
+                    "userid": 0,
+                    "type": 1,
+                    "roomid": roomId,
+                    "photourls": null,
+                    "streamId": liveID,
+                    "streamTime": parseInt((new Date() - new Date(liveTime)) / 1000),
+                    "uwxid": localStorage.wxUid
+                }
+                console.log("直播" + parseInt((new Date() - new Date(liveTime)) / 1000))
+                if (data.Data.RoomStatus == "回放") {
+                    var t = document.getElementsByTagName('video')[0];
+                    sendMsg.streamTime = parseInt(t.currentTime);
+                    console.log("回放" + parseInt(t.currentTime))
+                } else if (data.Data.RoomStatus == "直播中") {
+                    console.log("直播")
+                }
+
+                // console.log(ws)
+                // console.log(roomId)
+                // // ws.on('connect', function () {
+                // console.log(sendMsg)
+                console.log(JSON.stringify(sendMsg))
+                ws.emit("clientsent", JSON.stringify(sendMsg))
+                // ws.send("clientsent", JSON.stringify(sendMsg))
+                // ws.send(JSON.stringify(sendMsg))
+                // ws.send("啊,这多好啊")
+                // })
+
+                $(".msgList").append('<div class="msg-left"><img class="userIcon" src="' + localStorage.wxImg + '"><div class="userName">' + localStorage.wxName + '</div><div class="arrow"></div><div class="userMsg">' + inputContent + '</div></div>');
+                $(".msgContent").val("");
+                $("body").animate({scrollTop: $(".msgList").height()}, 10);
+            })
+        })
+
+        var clickMore = 0;
+
+        function getHistory() {
+            jQuery.getJSON(msgHistory + "?orderIndex=" + FirstID, function (data) {
+                console.log(data)
+                if (data.Data.List.length == 0) {
+                    return false;
+                }
+                FirstID = data.Data.List[data.Data.List.length - 1].ID;
+                console.log(FirstID);
+                var msgHistoryContent = "";
+                jQuery.each(data.Data.List.reverse(), function (name, value) {
+                    if (value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Female.png" || value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Female.jpg" || value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Man.jpg" || value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Man.png" || value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Male.png" || value.HeadUrl == "http://avatar.litchi.jstv.com/Avatar/Male.jpg") {
+                        value.HeadUrl = "http://static.jstv.com/ui/litchinews/videolive/img/Female.png";
+                    }
+                    msgHistoryContent += "<div class='msg-left'><img class='userIcon' src='" + value.HeadUrl + "'><div class='userName'>" + value.NickName + "</div><div class='arrow'></div><div class='userMsg'>" + value.CommentContent
+                    // console.log($(msgHistoryContent).find('.userMsg'))
+                    if (value.Imgs.length != 0) {
+                        // console.log("这里有图")
+                        for (var i = 0; i < value.Imgs.length; i++) {
+                            msgHistoryContent += "<img src='" + value.Imgs[i].Img + "' />"
+                        }
+
+                    }
+                    msgHistoryContent += "</div></div>"
+                });
+                jQuery(".msgList").prepend(msgHistoryContent);
+                jQuery(".msgList").prepend('<img src="http://static2.jstv.com/ui/jintan/images/waploading.png" class="btnLoadMoreMsg"/>');
+                console.log("已添加历史按钮")
+                if (clickMore == 1) {
+                    $("body").animate({scrollTop: $(window).width() / 640 * 100 * 16}, 10);
+                    console.log("已经滚动")
+                }
+            })
+        }
+
+        $(".msgList").on("click", ".btnLoadMoreMsg", function () {
+            $(this).hide();
+            clickMore = 1;
+            newMsgShow = 0;
+            getHistory();
+        })
+        $(".msgList").click(function () {
+            newMsgShow = 0;
+        })
+        $(".msgList").on("click", ".btnNewMsg", function () {
+            $(this).hide();
+            newMsgShow = 1;
+            $(".msgList").find(".msg-left").show();
+            $("body").animate({scrollTop: $(".msgList").height()}, 10);
+        })
+
+
+        jQuery(".interaction").click(function () {
+            jQuery(this).addClass("txtRed");
+            jQuery(".live").removeClass("txtRed");
+            jQuery(".addLiveInfo").removeClass("txtRed");
+            jQuery(".framediv, .liveInfo").hide();
+            jQuery(".msgList").show();
+            if (isWeiXin()) {
+                $(".inputMsg").show();
+            } else {
+                $(".inputMsg").hide();
+            }
+            $("body").animate({scrollTop: $(".msgList").height()}, 10);
+        })
+        jQuery(".live").click(function () {
+            jQuery(this).addClass("txtRed");
+            jQuery(".interaction").removeClass("txtRed");
+            jQuery(".addLiveInfo").removeClass("txtRed");
+            jQuery(".framediv").show();
+            jQuery(".msgList, .liveInfo").hide();
+            $(".inputMsg").hide();
+        })
+        jQuery(".addLiveInfo").click(function () {
+            jQuery(this).addClass("txtRed");
+            jQuery(".interaction").removeClass("txtRed");
+            jQuery(".live").removeClass("txtRed");
+            jQuery(".framediv").hide();
+            jQuery(".msgList").hide();
+            $(".inputMsg").hide();
+            $(".liveInfo").show();
+        })
+
+        $(".lineShow").on("click", ".lineNum", function () {
+            $(this).find(".lineTitle").addClass("txtRed");
+            $(this).siblings().find(".lineTitle").removeClass("txtRed");
+            videoUrlNow = $(this).attr("data-vUrl");
+            liveID = $(this).attr("data-id")
+            liveTime = $(this).attr("data-time")
+            $("video").attr("src", videoUrlNow);
+            console.log(videoUrlNow);
+            $("video").get(0).play();
+        })
+
+        function setTime() {
+            jQuery(".blank").height(jQuery(".header").height());
+            jQuery(".framediv, #frame").height(jQuery(window).height() - jQuery(".header").height())
+            if ($(".banner-live").get(0).currentTime > 0) {
+                // $(".logo-rt").show();
+            }
+
+        }
+
+        var times = setInterval(setTime, 1000);
+
+
+    })
+</script>
+</body>
+
+</html>
